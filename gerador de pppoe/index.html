@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de E-mails e Senhas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Gerador de E-mails e Senhas</h2>
+        
+        <label for="usuario">Nome de Usuário:</label>
+        <input type="text" id="usuario" placeholder="Digite o nome de usuário">
+        
+        <label for="dominio">Domínio:</label>
+        <input type="text" id="dominio" placeholder="Digite o domínio (ex: gmail.com)">
+        
+        <button onclick="gerarEmail()">Gerar E-mail</button>
+        <button onclick="gerarEmailESenha()">Gerar E-mail e Senha</button>
+        
+        <div class="resultado" id="resultados">
+            <!-- Lista de e-mails gerados será exibida aqui -->
+        </div>
+        
+        <div class="pagination" id="pagination">
+            <!-- Botões de paginação serão adicionados aqui -->
+        </div>
+        
+        <button class="download" onclick="downloadEmails()">Download Excel</button>
+        <button class="limpar" onclick="limparTudo()">Limpar Tudo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
