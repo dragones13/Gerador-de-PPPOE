@@ -8,16 +8,20 @@
 </head>
 <body>
     <div class="container">
-        <h2>Gerador de E-mails e Senhas</h2>
+        <h2>Gerador de PPPOE e Senhas</h2>
         
+
         <label for="usuario">Nome de Usuário:</label>
         <input type="text" id="usuario" placeholder="Digite o nome de usuário">
         
         <label for="dominio">Domínio:</label>
-        <input type="text" id="dominio" placeholder="Digite o domínio (ex: gmail.com)">
+        <input type="text" id="dominio" placeholder="Digite o domínio (ex: telecom.com)">
         
-        <button onclick="gerarEmail()">Gerar E-mail</button>
-        <button onclick="gerarEmailESenha()">Gerar E-mail e Senha</button>
+        <button onclick="gerarEmail()">Gerar PPPOE</button>
+        <button onclick="gerarEmailESenha()">Gerar PPPOE e Senha</button>
+        
+        <label for="busca">Buscar E-mail:</label>
+        <input type="text" id="busca" placeholder="Digite para buscar..." oninput="buscarEmail()">
         
         <div class="resultado" id="resultados">
             <!-- Lista de e-mails gerados será exibida aqui -->
@@ -28,7 +32,15 @@
         </div>
         
         <button class="download" onclick="downloadEmails()">Download Excel</button>
-        <button class="limpar" onclick="limparTudo()">Limpar Tudo</button>
+        <button class="download" onclick="limparTodos()">Limpar Todos</button>
+
+        <!-- Campo de upload de arquivo CSV -->
+        <input type="file" id="fileInput" accept=".csv">
+        <button onclick="processarArquivoCSV()">Processar CSV</button>
+
+        <!-- Campo de busca -->
+        <label for="busca">Buscar E-mail:</label>
+        <input type="text" id="busca" placeholder="Digite para buscar..." oninput="buscarEmail()">
     </div>
 
     <script src="script.js"></script>
